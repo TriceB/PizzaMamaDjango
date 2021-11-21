@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.core import serializers
-from .models import Pizza
+from .models import Pizza, Salad, Pasta, Side, Dessert, Drink
 # Create your views here.
 
 
@@ -17,7 +17,12 @@ def index(request):
 	pizzas_names_prices_str = ", ".join(pizzas_names_prices)
 	"""
 	pizzas = Pizza.objects.all().order_by('price')
-	return render(request, 'menu/index.html', {'pizzas': pizzas})
+	salads = Salad.objects.all().order_by('price')
+	pastas = Pasta.objects.all().order_by('price')
+	sides = Side.objects.all().order_by('price')
+	desserts = Dessert.objects.all().order_by('price')
+	drinks = Drink.objects.all().order_by('price')
+	return render(request, 'menu/index.html', {'pizzas': pizzas, 'salads': salads, 'pastas': pastas, 'sides': sides, "desserts": desserts, "drinks": drinks})
 
 
 def api_get_pizzas(request):

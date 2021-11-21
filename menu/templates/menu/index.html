@@ -29,6 +29,109 @@
 		{% endfor %}
 	
 	</div>
+	<div class="menu_title">
+	<h1>Our Salads</h1>
+	</div>
+
+	<div class="menu_list">
+	
+		{% for salad in salads %}
+		<div class="menu_list_item">
+			<span class="menu_list_title">{{salad.name}}</span>
+			<span class="menu_list_price">${{salad.price | floatformat:2}}</span>
+			
+			<span class="menu_list_ingredients">{{salad.ingredients}}</span>
+			{% if salad.vegetarian %}
+			<span class="menu_list_badge">VEGETARIAN</span>
+			{% elif salad.vegan %}
+			<span class="menu_list_badge">VEGAN</span>
+			{% endif %}
+		</div>
+		{% endfor %}
+	
+	</div>
+	
+	<div class="menu_title">
+	<h1>Our Pastas</h1>
+	</div>
+
+	<div class="menu_list">
+	
+		{% for pasta in pastas %}
+		<div class="menu_list_item">
+			<span class="menu_list_title">{{pasta.name}}</span>
+			<span class="menu_list_price">${{pasta.price | floatformat:2}}</span>
+			
+			<span class="menu_list_ingredients">{{pasta.ingredients}}</span>
+			{% if pasta.vegetarian %}
+			<span class="menu_list_badge">VEGETARIAN</span>
+			{% elif pasta.vegan %}
+			<span class="menu_list_badge">VEGAN</span>
+			{% endif %}
+		</div>
+		{% endfor %}
+	
+	</div>
+	
+	<div class="menu_title">
+	<h1>Our Sides</h1>
+	</div>
+
+	<div class="menu_list">
+	
+		{% for side in sides %}
+		<div class="menu_list_item">
+			<span class="menu_list_title">{{side.name}}</span>
+			<span class="menu_list_price">${{side.price | floatformat:2}}</span>
+			
+			<span class="menu_list_ingredients">{{side.ingredients}}</span>
+			{% if side.vegetarian %}
+			<span class="menu_list_badge">VEGETARIAN</span>
+			{% elif side.vegan %}
+			<span class="menu_list_badge">VEGAN</span>
+			{% endif %}
+		</div>
+		{% endfor %}
+	
+	</div>
+	
+	<div class="menu_title">
+	<h1>Our Desserts</h1>
+	</div>
+
+	<div class="menu_list">
+	
+		{% for dessert in desserts %}
+		<div class="menu_list_item">
+			<span class="menu_list_title">{{dessert.name}}</span>
+			<span class="menu_list_price">${{dessert.price | floatformat:2}}</span>
+			
+			<span class="menu_list_ingredients">{{dessert.ingredients}}</span>
+			{% if dessert.vegetarian %}
+			<span class="menu_list_badge">VEGETARIAN</span>
+			{% elif dessert.vegan %}
+			<span class="menu_list_badge">VEGAN</span>
+			{% endif %}
+		</div>
+		{% endfor %}
+	
+	</div>
+	
+	<div class="menu_title">
+	<h1>Our Drinks</h1>
+	</div>
+
+	<div class="menu_list">
+	
+		{% for drink in drinks %}
+		<div class="menu_list_item">
+			<span class="menu_list_title">{{drink.name}}</span>
+			<span class="menu_list_price">${{drink.price | floatformat:2}}</span>
+			
+		</div>
+		{% endfor %}
+	
+	</div>
 	
 </body>
 </html>
